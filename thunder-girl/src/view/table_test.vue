@@ -50,18 +50,18 @@
 
       reload: function(){
         this.disp = []
-        thunderGirl.load(this.disp, this.table_data, this.split, this.m_sec)
+        thunderGirl.load(this.disp, this.table_data, parseInt(this.split), parseInt(this.m_sec))
       },
 
       acc_load: function(){
-        thunderGirl.load(this.disp, this.table_data, this.split, this.m_sec)
+        thunderGirl.load(this.disp, this.table_data, parseInt(this.split), parseInt(this.m_sec))
       },
     },
 
     created(){
       console.log("This is created prc:")
       this.disp = []
-      thunderGirl.load(this.disp, this.table_data, this.split, this.m_sec)
+      thunderGirl.load(this.disp, this.table_data, parseInt(this.split), parseInt(this.m_sec))
     },
 
     mounted(){
