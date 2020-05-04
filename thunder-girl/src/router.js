@@ -14,8 +14,8 @@ export default new Router({
       component: Home
     },
     {
-      path: '/table_test',
-      name: 'table_test',
+      path: '/thunderGirl',
+      name: 'thunderGirl',
       component: TableTest
     }
   ]
