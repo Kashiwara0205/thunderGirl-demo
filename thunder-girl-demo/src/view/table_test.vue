@@ -17,9 +17,9 @@
     split : <input v-model="split" placeholder="input split">
     m_sec : <input v-model="m_sec" placeholder="input m_sec">
     <br> <br>
-    <button style="margin: 5px" v-on:click="check">disp table data in console</button>
-    <button style="margin: 5px" v-on:click="reload">reload disp table</button>
-    <button style="margin: 5px" v-on:click="acc_load">acc load disp table</button>
+    <button style="margin: 5px" v-on:click="check">disp table info in console</button>
+    <button style="margin: 5px" v-on:click="reload">reload table</button>
+    <button style="margin: 5px" v-on:click="acc_load">acc load table</button>
     <router-view/>
   </div>
 </template>
@@ -48,12 +48,14 @@
         console.log(this.disp)
       },
 
-      reload: function(){
-        thunderGirl.load(this.disp, this.table_data, parseInt(this.split), parseInt(this.m_sec))
+      reload: async function(){
+        await thunderGirl.load(this.disp, this.table_data, parseInt(this.split), parseInt(this.m_sec))
+        console.log("complete reload")
       },
 
-      acc_load: function(){
-        thunderGirl.acc_load(this.disp, this.table_data, parseInt(this.split), parseInt(this.m_sec))
+      acc_load: async function(){
+        await thunderGirl.acc_load(this.disp, this.table_data, parseInt(this.split), parseInt(this.m_sec))
+        console.log("complete acc_load")
       },
     },
 
