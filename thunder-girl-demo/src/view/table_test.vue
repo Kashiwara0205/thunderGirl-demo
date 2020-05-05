@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import thunderGirl from "./../../lib/index.js"
+  import thunderGirl from "thunder-girl"
   export default {
     data(){
       return{
