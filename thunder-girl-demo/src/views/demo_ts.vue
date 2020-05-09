@@ -26,43 +26,45 @@
 
 <script lang="ts">
   import thunderGirl from "thunder-girl"
-  export default {
-    data(){
-      return{
-        disp: [],
-        split: "1",
-        mSec: "1000",
-        tableData: [
-          { number: 1, name: "a", msg: "xxxx" },
-          { number: 2, name: "b", msg: "xxxx" },
-          { number: 3, name: "c", msg: "xxxx" },
-          { number: 4, name: "d", msg: "xxxx" },
-          { number: 5, name: "e", msg: "xxxx" },
-        ]
-      }
-    },
-    methods:{
-      check: function(){
-        console.log("data:")
-        console.log(this.disp)
-      },
-      reload: async function(){
-        await thunderGirl.load<object>(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
-        console.log("complete reload")
-      },
-      accLoad: async function(){
-        await thunderGirl.acc_load<object>(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
-        console.log("complete accLoad")
-      },
-    },
+  import { Component, Vue } from 'vue-property-decorator';
+
+  @Component
+  export default class DemoTs extends Vue {
+    disp: object[] = []
+    split = "1"
+    mSec = "1000"
+    tableData: object[] = [
+      { number: 1, name: "a", msg: "xxxx" },
+      { number: 2, name: "b", msg: "xxxx" },
+      { number: 3, name: "c", msg: "xxxx" },
+      { number: 4, name: "d", msg: "xxxx" },
+      { number: 5, name: "e", msg: "xxxx" },
+    ]
+
     created(){
       console.log("This is created prc:")
-      thunderGirl.load(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
-    },
+      thunderGirl.load<object>(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
+    }
+    
     mounted(){
       console.log("This is mounted prc:")
       console.log(this.disp)
-    },
+    }
+
+    check(){
+      console.log("data:")
+      console.log(this.disp)
+    }
+
+    async reload(){
+      await thunderGirl.load<object>(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
+      console.log("complete reload")
+    }
+
+    async accLoad(){
+      await thunderGirl.acc_load<object>(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
+      console.log("complete accLoad")
+    }
   }
 </script>
 
