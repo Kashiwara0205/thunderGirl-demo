@@ -9,4 +9,8 @@ docker-compose up
 ```
 
 # demo-page
-http://localhost:1234/thunderGirl
+js version:  
+http://localhost:1234/demo_js
+  
+ts version:  
+http://localhost:1234/demo_ts
