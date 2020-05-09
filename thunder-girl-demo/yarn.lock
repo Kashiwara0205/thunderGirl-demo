@@ -7623,10 +7623,10 @@ through@^2.3.6:
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
 
-thunder-girl@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/thunder-girl/-/thunder-girl-1.0.5.tgz#f5ff03e7341c18019b3861ba8784c5f0d9561972"
-  integrity sha512-hnhi4WTPPWw/gPbR0q1CdBHqIdB/FiWxEPccm8LZlhLNBug6cdN/LNjcj8FOhHDiHKu0f5gCLJx50vPxCASK8g==
+thunder-girl@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/thunder-girl/-/thunder-girl-1.0.6.tgz#bd1dce44582d584ab3e5b94e762854b166e3983f"
+  integrity sha512-/iasrETLpzTAkkOlsOoJSdF1wGp2KbK5H2iEzxiKwLCLlGhUzeq93mBW8pA1P2fyaaOXs9gAl++7wX07Cnn0ow==
 
 thunky@^1.0.2:
   version "1.1.0"

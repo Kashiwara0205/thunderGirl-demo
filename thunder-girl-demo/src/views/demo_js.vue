@@ -41,17 +41,18 @@
         ]
       }
     },
+
+    created(){
+      console.log("This is created prc:")
+      thunderGirl.load(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
+    },
+
+    mounted(){
+      console.log("This is mounted prc:")
+      console.log(this.disp)
+    },
+    
     methods:{
-      created(){
-        console.log("This is created prc:")
-        thunderGirl.load(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
-      },
-
-      mounted(){
-        console.log("This is mounted prc:")
-        console.log(this.disp)
-      },
-
       check: function(){
         console.log("data:")
         console.log(this.disp)
@@ -61,9 +62,9 @@
         await thunderGirl.load(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
         console.log("complete reload")
       },
-      
+
       accLoad: async function(){
-        await thunderGirl.acc_load(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
+        await thunderGirl.accLoad(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
         console.log("complete accLoad")
       },
     },

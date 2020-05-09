@@ -62,7 +62,7 @@
     }
 
     async accLoad(){
-      await thunderGirl.acc_load<object>(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
+      await thunderGirl.accLoad<object>(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
       console.log("complete accLoad")
     }
   }
