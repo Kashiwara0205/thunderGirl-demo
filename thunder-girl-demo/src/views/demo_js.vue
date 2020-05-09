@@ -1,6 +1,6 @@
 <template>
   <div id="thunderGirl">
-    <h1>thunderGirl test page</h1>
+    <h1>thunderGirl demo page(js)</h1>
     <table border="1" align="center">
       <tr>
         <th>number</th>
@@ -15,11 +15,11 @@
     </table>
     <br>
     split : <input v-model="split" placeholder="input split">
-    m_sec : <input v-model="m_sec" placeholder="input m_sec">
+    mSec : <input v-model="mSec" placeholder="input mSec">
     <br> <br>
     <button style="margin: 5px" v-on:click="check">disp table info in console</button>
     <button style="margin: 5px" v-on:click="reload">reload table</button>
-    <button style="margin: 5px" v-on:click="acc_load">acc load table</button>
+    <button style="margin: 5px" v-on:click="accLoad">acc load table</button>
     <router-view/>
   </div>
 </template>
@@ -31,8 +31,8 @@
       return{
         disp: [],
         split: 1,
-        m_sec: 1000,
-        table_data: [
+        mSec: 1000,
+        tableData: [
           { number: 1, name: "a", msg: "xxxx" },
           { number: 2, name: "b", msg: "xxxx" },
           { number: 3, name: "c", msg: "xxxx" },
@@ -41,29 +41,24 @@
         ]
       }
     },
-
     methods:{
       check: function(){
         console.log("data:")
         console.log(this.disp)
       },
-
       reload: async function(){
-        await thunderGirl.load(this.disp, this.table_data, parseInt(this.split), parseInt(this.m_sec))
+        await thunderGirl.load(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
         console.log("complete reload")
       },
-
-      acc_load: async function(){
-        await thunderGirl.acc_load(this.disp, this.table_data, parseInt(this.split), parseInt(this.m_sec))
-        console.log("complete acc_load")
+      accLoad: async function(){
+        await thunderGirl.acc_load(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
+        console.log("complete accLoad")
       },
     },
-
     created(){
       console.log("This is created prc:")
-      thunderGirl.load(this.disp, this.table_data, parseInt(this.split), parseInt(this.m_sec))
+      thunderGirl.load(this.disp, this.tableData, parseInt(this.split), parseInt(this.mSec))
     },
-
     mounted(){
       console.log("This is mounted prc:")
       console.log(this.disp)
