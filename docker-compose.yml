@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     build: .
- #   command: ash -c "cd thunder-girl-demo;npm run serve"
+    command: ash -c "cd thunder-girl-demo;npm run serve"
     ports:
       - 1234:8080
     volumes:
